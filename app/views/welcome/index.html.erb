@@ -1,12 +1,12 @@
 <h1>Welcome to Wikiful</h1>
 <p>Check out our most recent articles, or browse by <%= link_to "category", categories_path %></p>
 <% @recent_articles.each do |article| %>
-  <div>
+  <div class="well">
     <h2><%= link_to article.title, article %></h2>
     <p>Published on: <%= article.updated_at.strftime('%b %d, %Y') %></p>
     <p>
       Filed in: <% article.categories.each do |category| %>
-        <%= link_to category.name, category %>&nbsp;
+        <span class="label label-default"><%= link_to category.name, category %></span>&nbsp;
       <% end %>
     </p>
     <p>

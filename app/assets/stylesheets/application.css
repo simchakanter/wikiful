@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+ .brand {
+  text-transform: uppercase;
+ }
+
+ .label a {
+  color: white;
+ }
