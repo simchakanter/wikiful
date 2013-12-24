@@ -13,6 +13,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    # Adding binding.pry intercepts the request 
+    # binding.pry
     @article = Article.new(article_params)
     if @article.save
       redirect_to @article
